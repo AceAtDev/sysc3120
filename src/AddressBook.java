@@ -1,4 +1,25 @@
-public class AddressBook {
+import java.util.ArrayList;
+import java.util.List;
 
-    //hello this is commit tests
+public class AddressBook {
+    private final List<BuddyInfo> buddies = new ArrayList<>();
+
+    public void addBuddy(BuddyInfo buddy) {
+        buddies.add(buddy);
+    }
+
+    public boolean removeBuddy(BuddyInfo buddy) {
+        return buddies.remove(buddy);
+    }
+
+    public static void main(String[] args) {
+        AddressBook book = new AddressBook();
+        System.out.println("Address book");
+
+        BuddyInfo homer = new BuddyInfo(
+                "Homer", "1233 Colonel By Drive", "+1 123 123 1234");
+
+        book.addBuddy(homer);
+        book.removeBuddy(homer);
+    }
 }
