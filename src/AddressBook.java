@@ -28,5 +28,11 @@ public class AddressBook {
 
         book.addBuddy(homer);
         book.removeBuddy(homer);
+
+        newFunction();
+    }
+
+    public static void newFunction(){
+        System.out.println("I'm a new function :)");
     }
 }
